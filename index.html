@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera página web</title>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;">Mi perfil de Estudiante</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#objetivo">Objetivo</a></li>
+            <li><a href="#intereses">Intereses</a></li>
+            <li><a href="pages/contacto/contacto.html">Contacto</a></li>
+            <li><a href="pages/multimedia/multimedia.html">Multimedia</a></li>
+            <li><a href="pages/horario/horario.html">Horario</a></li>
+            <li><a href="pages/buscar/buscar.html">Buscar</a></li>
+            <li><a href="error404.html">errorplus</a></li>
+        </ul>
+    </nav>
+
+    <main style="background-color: aliceblue;">
+        <section>
+            <h2>Sobre mí</h2>
+            <p>Mi nombre es Jhon Liscano.
+                Estoy aprendiendo fundamentos de sistemas WEB</p>
+        </section>
+
+        <section id="objetivo">
+            <h2>Mis objetivos</h2>
+            <p>Aprender a crear una buena aplicación WEB sin IA</p>
+        </section>
+
+        <section id="intereses">
+            <h2>Mis intereses</h2>
+
+            <form>
+
+                <!-- CHECKBOX -->
+                <h3>Selecciona tus intereses:</h3>
+
+                <input type="checkbox" id="bd" name="intereses" value="Base de datos">
+                <label for="bd">Base de datos</label><br>
+
+                <input type="checkbox" id="web" name="intereses" value="Diseños WEB">
+                <label for="web">Diseños WEB</label><br>
+
+                <input type="checkbox" id="tec" name="intereses" value="Tecnología">
+                <label for="tec">Tecnología</label><br>
+
+                <input type="checkbox" id="valorant" name="intereses" value="Valorant">
+                <label for="valorant">Valorant</label><br>
+
+                <input type="checkbox" id="html" name="intereses" value="HTML">
+                <label for="html">HTML</label><br>
+
+                <input type="checkbox" id="css" name="intereses" value="CSS">
+                <label for="css">CSS</label><br>
+
+                <input type="checkbox" id="js" name="intereses" value="JavaScript">
+                <label for="js">JavaScript</label><br>
+
+                <input type="checkbox" id="python" name="intereses" value="Python">
+                <label for="python">Python</label><br>
+
+                <input type="checkbox" id="java" name="intereses" value="Java">
+                <label for="java">Java</label><br>
+
+                <input type="checkbox" id="redes" name="intereses" value="Redes">
+                <label for="redes">Redes</label><br><br>
+
+                <!-- RADIOS -->
+                <h3>Frecuencia</h3>
+
+                <input type="radio" id="diario" name="frecuencia" value="Diario">
+                <label for="diario">Diario</label><br>
+
+                <input type="radio" id="semanal" name="frecuencia" value="Semanal">
+                <label for="semanal">Semanal</label><br>
+
+                <input type="radio" id="mensual" name="frecuencia" value="Mensual">
+                <label for="mensual">Mensual</label><br>
+
+            </form>
+        </section>
+
+        <section class="seccion1">
+            <h2>Pasos para estudiar HTML</h2>
+            <ol>
+                <li>Abrir el editor de código</li>
+                <li>Crear el archivo .html</li>
+                <li>Escribir etiquetas HTML</li>
+                <li>Guardar y abrir en el navegador</li>
+            </ol>
+        </section>
+
+        <section class="seccion2">
+            <h2>Estudio en:</h2>
+            <figure>
+                <img src="img/logo/logoEspe.jpg" height="200" width="232" alt="Logo de la ESPE">
+                <figcaption>Universidad de las Fuerzas Armadas</figcaption>
+            </figure>
+        </section>
+
+        <section class="seccion3">
+            <h2>Publicaciones</h2>
+            <article>
+                <h3>¿Por qué aprender HTML?</h3>
+                <p>HTML permite crear la estructura de una página web de forma ordenada</p>
+            </article>
+            <article>
+                <h3>¿Para qué sirven las etiquetas semánticas?</h3>
+                <p>Las etiquetas semánticas nos ayudan a comprender mejor el contenido de una página.</p>
+            </article>
+        </section>
+
+        <!-- <section class="formulario">
+            <h2>Formulario</h2>
+            <form action="pages/buscar/buscar.html" method="GET">
+                <label for="tema">Tema:</label>
+                <input type="text" id="tema" name="tema">
+                <button type="submit">Buscar</button>
+            </form>
+        </section> -->
+    </main>
+
+    <aside style="background-color: aquamarine;">
+        <h2>Dato adicional</h2>
+        <p>HTML semántico mejora la organización del código y facilita la lectura</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 Jhon Liscano</p>
+        <p>Clase de Fundamentos Web - HTML Semántico</p>
+    </footer>
+
+</body>
+</html>
