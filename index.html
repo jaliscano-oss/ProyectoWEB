@@ -8,23 +8,28 @@
 
 <body>
     <header>
-        <h1 style="text-align: center;">Mi perfil de Estudiante</h1>
+        <h1 align = "center">Mi perfil de Estudiante</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#objetivo">Objetivo</a></li>
-            <li><a href="#intereses">Intereses</a></li>
-            <li><a href="pages/contacto/contacto.html">Contacto</a></li>
-            <li><a href="pages/multimedia/multimedia.html">Multimedia</a></li>
-            <li><a href="pages/horario/horario.html">Horario</a></li>
-            <li><a href="pages/buscar/buscar.html">Buscar</a></li>
-            <li><a href="error404.html">errorplus</a></li>
-        </ul>
-    </nav>
+    <section class="navegacion"  align = "center">
+        <nav>
+            <ul style="padding: 0;">
+                <li style="display: inline; margin: 0 10px;"><a href="#">Inicio</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="#objetivo">Objetivo</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="#intereses">Intereses</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="pages/contacto/contacto.html">Contacto</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="pages/multimedia/multimedia.html">Multimedia</a>
+                </li>
+                <li style="display: inline; margin: 0 10px;"><a href="pages/horario/horario.html">Horario</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="pages/buscar/buscar.html">Buscar</a></li>
+                <li style="display: inline; margin: 0 10px;"><a
+                        href="pages/formularios/formularios.html">Formularios</a></li>
+                <li style="display: inline; margin: 0 10px;"><a href="error404.html">errorplus</a></li>
+            </ul>
+        </nav>
+    </section>
 
-    <main style="background-color: aliceblue;">
+    <main style="background-color: aliceblue;" align = "center">
         <section>
             <h2>Sobre mí</h2>
             <p>Mi nombre es Jhon Liscano.
@@ -36,55 +41,70 @@
             <p>Aprender a crear una buena aplicación WEB sin IA</p>
         </section>
 
-        <section id="intereses">
-            <h2>Mis intereses</h2>
+        <section id="intereses" style="padding: 0 500px;">
+            <fieldset>
+                <h2>📋Mis intereses</h2>
+                <form action="pages/buscar/buscar.html" method="GET">
 
-            <form>
+                    <!-- CHECKBOX -->
+                    <fieldset>
+                        <legend>
+                            <h3>Selecciona tus Hoobies:</h3>
+                        </legend>
+                        <input type="checkbox" id="videojuegos" name="intereses[]" value="videojuegos">
+                        <label for="videojuegos">Video Juegos</label>
 
-                <!-- CHECKBOX -->
-                <h3>Selecciona tus intereses:</h3>
-                <input type="checkbox" id="bd" name="intereses" value="Base de datos">
-                <label for="bd">Base de datos</label><br>
+                        <input type="checkbox" id="html" name="intereses[]" value="HTML">
+                        <label for="html">HTML</label>
 
-                <input type="checkbox" id="web" name="intereses" value="Diseños WEB">
-                <label for="web">Diseños WEB</label><br>
+                        <input type="checkbox" id="bailar" name="intereses[]" value="Bailar">
+                        <label for="bailar">Bailar</label>
 
-                <input type="checkbox" id="tec" name="intereses" value="Tecnología">
-                <label for="tec">Tecnología</label><br>
+                        <input type="checkbox" id="futbol" name="intereses[]" value="Futbol">
+                        <label for="futbol">Fútbol</label>
+                    </fieldset>
 
-                <input type="checkbox" id="valorant" name="intereses" value="Valorant">
-                <label for="valorant">Valorant</label><br>
+                    <!-- RADIOS -->
+                    <fieldset>
+                        <legend>
+                            <h3>Frecuencia</h3>
+                        </legend>
+                        <input type="radio" id="diario" name="frecuencia" value="Diario" required>
+                        <label for="diario">Diario</label>
 
-                <input type="checkbox" id="html" name="intereses" value="HTML">
-                <label for="html">HTML</label><br>
+                        <input type="radio" id="semanal" name="frecuencia" value="Semanal">
+                        <label for="semanal">Semanal</label>
 
-                <input type="checkbox" id="css" name="intereses" value="CSS">
-                <label for="css">CSS</label><br>
+                        <input type="radio" id="mensual" name="frecuencia" value="Mensual">
+                        <label for="mensual">Mensual</label>
+                    </fieldset>
 
-                <input type="checkbox" id="js" name="intereses" value="JavaScript">
-                <label for="js">JavaScript</label><br>
+                    <fieldset>
+                        <legend>
+                            <h3>Tu lenguaje favorito</h3>
+                        </legend>
+                        <label for="lenguaje">Escribe un lenguaje:</label>
+                        <input type="text" id="lenguaje" name="lenguaje" placeholder="Ejemplo: Java" required
+                            minlength="3" maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+">
+                    </fieldset>
 
-                <input type="checkbox" id="python" name="intereses" value="Python">
-                <label for="python">Python</label><br>
+                    <h3>Selecciona tu nivel</h3>
+                    <label for="nivel">Nivel:</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="">Seleccione</option>
+                        <option value="Basico">Básico</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Avanzado">Avanzado</option>
+                    </select>
+            </fieldset>
 
-                <input type="checkbox" id="java" name="intereses" value="Java">
-                <label for="java">Java</label><br>
-
-                <input type="checkbox" id="redes" name="intereses" value="Redes">
-                <label for="redes">Redes</label><br><br>
-
-                <!-- RADIOS -->
-                <h3>Frecuencia</h3>
-                <input type="radio" id="diario" name="frecuencia" value="Diario">
-                <label for="diario">Diario</label><br>
-
-                <input type="radio" id="semanal" name="frecuencia" value="Semanal">
-                <label for="semanal">Semanal</label><br>
-
-                <input type="radio" id="mensual" name="frecuencia" value="Mensual">
-                <label for="mensual">Mensual</label><br>
-
+            <br></br>
+            <!-- BOTÓN DE ENVÍO -->
+            <div align="center">
+                <input type="submit" value="🔍 Buscar" style="padding: 10px 30px; font-size: 16px;">
+            </div>
             </form>
+            </fieldset>
         </section>
 
         <section class="seccion1">
@@ -100,7 +120,7 @@
         <section class="seccion2">
             <h2>Estudio en:</h2>
             <figure>
-                <img src="img/logo/logoEspe.jpg" height="200" width="232" alt="Logo de la ESPE">
+                <img src="img/logo/logoEspe.jpg" height="300" width="300" alt="Logo de la ESPE">
                 <figcaption>Universidad de las Fuerzas Armadas</figcaption>
             </figure>
         </section>
@@ -116,26 +136,18 @@
                 <p>Las etiquetas semánticas nos ayudan a comprender mejor el contenido de una página.</p>
             </article>
         </section>
-
-        <!-- <section class="formulario">
-            <h2>Formulario</h2>
-            <form action="pages/buscar/buscar.html" method="GET">
-                <label for="tema">Tema:</label>
-                <input type="text" id="tema" name="tema">
-                <button type="submit">Buscar</button>
-            </form>
-        </section> -->
     </main>
 
-    <aside style="background-color: aquamarine;">
+    <aside style="background-color: aquamarine;"  align = "center">
         <h2>Dato adicional</h2>
         <p>HTML semántico mejora la organización del código y facilita la lectura</p>
     </aside>
 
-    <footer>
+    <footer align = "center">
         <p>&copy; 2026 Jhon Liscano</p>
         <p>Clase de Fundamentos Web - HTML Semántico</p>
     </footer>
 
 </body>
+
 </html>
